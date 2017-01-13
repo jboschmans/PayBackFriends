@@ -13,11 +13,11 @@ class AddFriendsViewController: UIViewController, UITableViewDelegate, UITableVi
     @IBOutlet var txtUsername: UITextField!
     @IBOutlet var table: UITableView!
     
-    
     var cellContent = [""]
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loggedInUser = "jorisboschmans" // ONLY FOR TESTING
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,11 +37,55 @@ class AddFriendsViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
+    internal func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedUser = cellContent[indexPath.row]
+        
+        let refreshAlert = UIAlertController(title: "Add Friend", message: "Are you sure that you want to add " + selectedUser + " as your friend?", preferredStyle: UIAlertControllerStyle.alert)
+        
+        refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            tableView.deselectRow(at: indexPath, animated: true)
+            
+            let headers = [
+                "content-type": "application/x-www-form-urlencoded"
+            ]
+            
+            let postData = NSMutableData(data: "username=\(loggedInUser)".data(using: String.Encoding.utf8)!)
+            postData.append("&friend=\(selectedUser)".data(using: String.Encoding.utf8)!)
+            
+            let request = NSMutableURLRequest(url: NSURL(string: "https://paybackfriendsserver.herokuapp.com/addfriend")! as URL,
+                                              cachePolicy: .useProtocolCachePolicy,
+                                              timeoutInterval: 10.0)
+            request.httpMethod = "POST"
+            request.allHTTPHeaderFields = headers
+            request.httpBody = postData as Data
+            
+            //let session = URLSession.shared
+            let dataTask = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+                if (error != nil) {
+                    print(error!)
+                } else {
+                    DispatchQueue.main.sync {
+                        self.cellContent.remove(at: indexPath.row)
+                        self.table.reloadData()
+                    }
+                }
+            })
+            
+            dataTask.resume()
+        }))
+        
+        refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+            print("Canceled")
+        }))
+        
+        present(refreshAlert, animated: true, completion: nil)
+    }
+    
     @IBAction func searchUsers(_ sender: Any) {
         let _username = txtUsername.text
         
         if (!(_username?.isEmpty)!){
-            let url = URL(string: "https://paybackfriendsserver.herokuapp.com/search/" + _username!)
+            let url = URL(string: "https://paybackfriendsserver.herokuapp.com/search/" + _username! + "/" + loggedInUser)
             let task = URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
                 if error != nil {
                     print(error!)
@@ -59,15 +103,6 @@ class AddFriendsViewController: UIViewController, UITableViewDelegate, UITableVi
                             } else {
                                 DispatchQueue.main.sync {
                                     self.cellContent = response as! [String]
-                                    for (index, value) in self.cellContent.enumerated(){
-                                        if loggedInUser == value {
-                                            self.cellContent.remove(at: index)
-                                            break;
-                                        }
-                                    }
-                                    if self.cellContent.count < 1 {
-                                        self.cellContent.append("No user was found")
-                                    }
                                     self.cellContent.sort()
                                     self.table.reloadData()
                                 }

@@ -15,7 +15,6 @@
 		9E70A06E1E14145D00597A61 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E70A06D1E14145D00597A61 /* LogInViewController.swift */; };
 		9EC6CEAB1E23DBE3009FB8B8 /* AddFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6CEAA1E23DBE3009FB8B8 /* AddFriendsViewController.swift */; };
 		9EC6CEAD1E23DC35009FB8B8 /* MyFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6CEAC1E23DC35009FB8B8 /* MyFriendsViewController.swift */; };
-		9EC6CEAF1E23DC48009FB8B8 /* WhoOwesMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6CEAE1E23DC48009FB8B8 /* WhoOwesMoneyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		9E70A06D1E14145D00597A61 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		9EC6CEAA1E23DBE3009FB8B8 /* AddFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendsViewController.swift; sourceTree = "<group>"; };
 		9EC6CEAC1E23DC35009FB8B8 /* MyFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFriendsViewController.swift; sourceTree = "<group>"; };
-		9EC6CEAE1E23DC48009FB8B8 /* WhoOwesMoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoOwesMoneyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +64,6 @@
 				9E70A06D1E14145D00597A61 /* LogInViewController.swift */,
 				9EC6CEAC1E23DC35009FB8B8 /* MyFriendsViewController.swift */,
 				9E70A06B1E1413E200597A61 /* RegisterViewController.swift */,
-				9EC6CEAE1E23DC48009FB8B8 /* WhoOwesMoneyViewController.swift */,
 				9E70A0591E140C2C00597A61 /* AppDelegate.swift */,
 				9E70A05D1E140C2C00597A61 /* Main.storyboard */,
 				9E70A0601E140C2C00597A61 /* Assets.xcassets */,
@@ -152,7 +149,6 @@
 				9EC6CEAB1E23DBE3009FB8B8 /* AddFriendsViewController.swift in Sources */,
 				9E70A06C1E1413E200597A61 /* RegisterViewController.swift in Sources */,
 				9E70A05A1E140C2C00597A61 /* AppDelegate.swift in Sources */,
-				9EC6CEAF1E23DC48009FB8B8 /* WhoOwesMoneyViewController.swift in Sources */,
 				9E70A06E1E14145D00597A61 /* LogInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
