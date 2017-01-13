@@ -8,20 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		9E70A05A1E140C2C00597A61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E70A0591E140C2C00597A61 /* AppDelegate.swift */; };
-		9E70A05C1E140C2C00597A61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E70A05B1E140C2C00597A61 /* ViewController.swift */; };
 		9E70A05F1E140C2C00597A61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E70A05D1E140C2C00597A61 /* Main.storyboard */; };
 		9E70A0611E140C2C00597A61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E70A0601E140C2C00597A61 /* Assets.xcassets */; };
 		9E70A0641E140C2C00597A61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E70A0621E140C2C00597A61 /* LaunchScreen.storyboard */; };
+		9E70A06C1E1413E200597A61 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E70A06B1E1413E200597A61 /* RegisterViewController.swift */; };
+		9E70A06E1E14145D00597A61 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E70A06D1E14145D00597A61 /* LogInViewController.swift */; };
+		9EC6CEAB1E23DBE3009FB8B8 /* AddFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6CEAA1E23DBE3009FB8B8 /* AddFriendsViewController.swift */; };
+		9EC6CEAD1E23DC35009FB8B8 /* MyFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6CEAC1E23DC35009FB8B8 /* MyFriendsViewController.swift */; };
+		9EC6CEAF1E23DC48009FB8B8 /* WhoOwesMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6CEAE1E23DC48009FB8B8 /* WhoOwesMoneyViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9E70A0561E140C2C00597A61 /* Pay Back Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pay Back Friends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E70A0591E140C2C00597A61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9E70A05B1E140C2C00597A61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9E70A05E1E140C2C00597A61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9E70A0601E140C2C00597A61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E70A0631E140C2C00597A61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9E70A0651E140C2C00597A61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E70A06B1E1413E200597A61 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		9E70A06D1E14145D00597A61 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		9EC6CEAA1E23DBE3009FB8B8 /* AddFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendsViewController.swift; sourceTree = "<group>"; };
+		9EC6CEAC1E23DC35009FB8B8 /* MyFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFriendsViewController.swift; sourceTree = "<group>"; };
+		9EC6CEAE1E23DC48009FB8B8 /* WhoOwesMoneyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoOwesMoneyViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +62,12 @@
 		9E70A0581E140C2C00597A61 /* Pay Back Friends */ = {
 			isa = PBXGroup;
 			children = (
+				9EC6CEAA1E23DBE3009FB8B8 /* AddFriendsViewController.swift */,
+				9E70A06D1E14145D00597A61 /* LogInViewController.swift */,
+				9EC6CEAC1E23DC35009FB8B8 /* MyFriendsViewController.swift */,
+				9E70A06B1E1413E200597A61 /* RegisterViewController.swift */,
+				9EC6CEAE1E23DC48009FB8B8 /* WhoOwesMoneyViewController.swift */,
 				9E70A0591E140C2C00597A61 /* AppDelegate.swift */,
-				9E70A05B1E140C2C00597A61 /* ViewController.swift */,
 				9E70A05D1E140C2C00597A61 /* Main.storyboard */,
 				9E70A0601E140C2C00597A61 /* Assets.xcassets */,
 				9E70A0621E140C2C00597A61 /* LaunchScreen.storyboard */,
@@ -136,8 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E70A05C1E140C2C00597A61 /* ViewController.swift in Sources */,
+				9EC6CEAD1E23DC35009FB8B8 /* MyFriendsViewController.swift in Sources */,
+				9EC6CEAB1E23DBE3009FB8B8 /* AddFriendsViewController.swift in Sources */,
+				9E70A06C1E1413E200597A61 /* RegisterViewController.swift in Sources */,
 				9E70A05A1E140C2C00597A61 /* AppDelegate.swift in Sources */,
+				9EC6CEAF1E23DC48009FB8B8 /* WhoOwesMoneyViewController.swift in Sources */,
+				9E70A06E1E14145D00597A61 /* LogInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +315,7 @@
 				9E70A06A1E140C2C00597A61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
