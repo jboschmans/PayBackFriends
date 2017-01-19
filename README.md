@@ -1,0 +1,2 @@
+# PayBackFriends
+Deze applicatie voor iPad en iPhone kunt u gebruiken om eenvoudig bij te houden wie u nog geld moet en hoeveel. U kunt makkelijk nieuwe vrienden toevoegen en een bedrag ingeven. Deze vriend krijgt dit bedrag dan ook te zien als hij/zij op de eigen applicatie kijkt. Dit alles werkt via een online database. Deze server dat de database beheert is ook door mij geschreven in NodeJS en vindt u hier: https://github.com/jboschmans/PayBackFriendsServer
