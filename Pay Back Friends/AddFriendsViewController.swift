@@ -17,7 +17,6 @@ class AddFriendsViewController: UIViewController, UITableViewDelegate, UITableVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loggedInUser = "jorisboschmans" // ONLY FOR TESTING
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,7 +24,7 @@ class AddFriendsViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        if cellContent[0].isEmpty {
+        if cellContent.count == 0 || cellContent[0].isEmpty {
             return 0
         }
         return cellContent.count
@@ -115,6 +114,10 @@ class AddFriendsViewController: UIViewController, UITableViewDelegate, UITableVi
             })
             task.resume()
         }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
     }
     
 }

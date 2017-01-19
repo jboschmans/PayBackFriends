@@ -14,7 +14,9 @@
 		9E70A06C1E1413E200597A61 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E70A06B1E1413E200597A61 /* RegisterViewController.swift */; };
 		9E70A06E1E14145D00597A61 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E70A06D1E14145D00597A61 /* LogInViewController.swift */; };
 		9EC6CEAB1E23DBE3009FB8B8 /* AddFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6CEAA1E23DBE3009FB8B8 /* AddFriendsViewController.swift */; };
-		9EC6CEAD1E23DC35009FB8B8 /* MyFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EC6CEAC1E23DC35009FB8B8 /* MyFriendsViewController.swift */; };
+		9EF70FF81E2FB52100E6CF17 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF70FF71E2FB52100E6CF17 /* Friend.swift */; };
+		9EF70FFC1E2FDEC600E6CF17 /* MyFriendsMasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF70FFB1E2FDEC600E6CF17 /* MyFriendsMasterTableViewController.swift */; };
+		9EF70FFE1E2FDEE500E6CF17 /* MyFriendsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF70FFD1E2FDEE500E6CF17 /* MyFriendsDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +29,9 @@
 		9E70A06B1E1413E200597A61 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9E70A06D1E14145D00597A61 /* LogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		9EC6CEAA1E23DBE3009FB8B8 /* AddFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddFriendsViewController.swift; sourceTree = "<group>"; };
-		9EC6CEAC1E23DC35009FB8B8 /* MyFriendsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyFriendsViewController.swift; sourceTree = "<group>"; };
+		9EF70FF71E2FB52100E6CF17 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		9EF70FFB1E2FDEC600E6CF17 /* MyFriendsMasterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyFriendsMasterTableViewController.swift; path = ../MyFriendsMasterTableViewController.swift; sourceTree = "<group>"; };
+		9EF70FFD1E2FDEE500E6CF17 /* MyFriendsDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyFriendsDetailViewController.swift; path = ../MyFriendsDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +64,43 @@
 		9E70A0581E140C2C00597A61 /* Pay Back Friends */ = {
 			isa = PBXGroup;
 			children = (
-				9EC6CEAA1E23DBE3009FB8B8 /* AddFriendsViewController.swift */,
-				9E70A06D1E14145D00597A61 /* LogInViewController.swift */,
-				9EC6CEAC1E23DC35009FB8B8 /* MyFriendsViewController.swift */,
-				9E70A06B1E1413E200597A61 /* RegisterViewController.swift */,
+				9EEEABC01E30B6A60077B42A /* Controller */,
+				9EEEABBE1E30B6840077B42A /* Model */,
+				9EEEABBF1E30B69F0077B42A /* View */,
 				9E70A0591E140C2C00597A61 /* AppDelegate.swift */,
-				9E70A05D1E140C2C00597A61 /* Main.storyboard */,
 				9E70A0601E140C2C00597A61 /* Assets.xcassets */,
 				9E70A0621E140C2C00597A61 /* LaunchScreen.storyboard */,
 				9E70A0651E140C2C00597A61 /* Info.plist */,
 			);
 			path = "Pay Back Friends";
+			sourceTree = "<group>";
+		};
+		9EEEABBE1E30B6840077B42A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9EF70FF71E2FB52100E6CF17 /* Friend.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		9EEEABBF1E30B69F0077B42A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E70A05D1E140C2C00597A61 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		9EEEABC01E30B6A60077B42A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9EC6CEAA1E23DBE3009FB8B8 /* AddFriendsViewController.swift */,
+				9E70A06D1E14145D00597A61 /* LogInViewController.swift */,
+				9EF70FFD1E2FDEE500E6CF17 /* MyFriendsDetailViewController.swift */,
+				9EF70FFB1E2FDEC600E6CF17 /* MyFriendsMasterTableViewController.swift */,
+				9E70A06B1E1413E200597A61 /* RegisterViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,10 +175,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EC6CEAD1E23DC35009FB8B8 /* MyFriendsViewController.swift in Sources */,
+				9EF70FF81E2FB52100E6CF17 /* Friend.swift in Sources */,
 				9EC6CEAB1E23DBE3009FB8B8 /* AddFriendsViewController.swift in Sources */,
 				9E70A06C1E1413E200597A61 /* RegisterViewController.swift in Sources */,
+				9EF70FFC1E2FDEC600E6CF17 /* MyFriendsMasterTableViewController.swift in Sources */,
 				9E70A05A1E140C2C00597A61 /* AppDelegate.swift in Sources */,
+				9EF70FFE1E2FDEE500E6CF17 /* MyFriendsDetailViewController.swift in Sources */,
 				9E70A06E1E14145D00597A61 /* LogInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
