@@ -79,9 +79,10 @@ class MyFriendsMasterTableViewController: UITableViewController {
         task.resume()
     }
     
-    @IBAction func reload(_ sender: Any) {
+    @IBAction func refresh(_ sender: Any) {
         loadFriends()
     }
+    
     
     
 

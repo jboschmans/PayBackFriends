@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -178,12 +178,12 @@
                         <outlet property="lblErrors" destination="LWz-7B-FeW" id="Cl1-Fs-k6m"/>
                         <outlet property="password" destination="dCD-FU-Fcv" id="6dy-u7-50J"/>
                         <outlet property="username" destination="jWi-gu-5o6" id="bf9-1l-Kg4"/>
-                        <segue destination="CFV-Qo-s9f" kind="show" identifier="logIn" id="t9D-Qq-VWc"/>
+                        <segue destination="1bg-bb-XQc" kind="show" identifier="logIn" id="9uc-a0-wqy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="966.84782608695662" y="105.79710144927537"/>
+            <point key="canvasLocation" x="1004" y="71"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="mdz-oK-Tne">
@@ -511,7 +511,7 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mka-9C-3Xz" id="tHx-eB-zCM">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -543,7 +543,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfw-pB-Z2C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3054" y="504"/>
+            <point key="canvasLocation" x="6083" y="-669"/>
         </scene>
         <!--My Friends Detail View Controller-->
         <scene sceneID="Yir-Ng-3ig">
@@ -653,7 +653,7 @@
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bsb-u7-7ot" id="csh-G4-lAA">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
@@ -667,16 +667,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Friends" id="BSl-7N-hYO">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="8Cq-NK-Agj">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="msp-zA-uw4">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Reload"/>
-                                <connections>
-                                    <action selector="reload:" destination="TkZ-7m-sWz" eventType="touchUpInside" id="rOo-uS-Sw2"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="refresh" id="8Cq-NK-Agj">
+                            <connections>
+                                <action selector="refresh:" destination="TkZ-7m-sWz" id="xJx-Id-agh"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="Gfr-3d-5oN">
+                            <connections>
+                                <segue destination="a9n-2j-qdF" kind="show" id="965-KZ-qVV"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -716,24 +715,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cG2-i3-URJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3113" y="-341"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="bth-b0-dkq">
-            <objects>
-                <tabBarController id="CFV-Qo-s9f" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="pV1-dm-4za">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="1bg-bb-XQc" kind="relationship" relationship="viewControllers" id="I27-k9-b4O"/>
-                        <segue destination="a9n-2j-qdF" kind="relationship" relationship="viewControllers" id="sjh-AD-EZe"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n23-Ri-9QW" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1976" y="107"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
